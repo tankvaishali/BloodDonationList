@@ -206,7 +206,9 @@ function App() {
                 {currentItems.length > 0 ? (
                   currentItems.map((person, index) => (
                     <tr key={index}>
-                      <td>{index+1}</td>
+                       {/* Adjust Sr. to start from (currentPage - 1) * itemsPerPage + index + 1 */}
+                       <td>{(currentPage - 1) * itemsPerPage + index + 1}</td>
+                      {/* <td>{index+1}</td> */}
                       <td className="text-capitalize">{person.name}</td>
                       <td>{person.MobileNumber}</td>
                       <td>{person.BloodGroup}</td>
