@@ -18,7 +18,8 @@ function App() {
   const getData = () => {
     axios
       // .get("http://localhost:3080/get/index")
-      .get("https://bloodb.vercel.app/")
+      // .get("https://bloodb.vercel.app/")
+      .get("https://blood-donation-list-backend.vercel.app/")
       .then((response) => {
         setApi(response.data);
         setLoader(false);
